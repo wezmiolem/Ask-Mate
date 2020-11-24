@@ -6,3 +6,5 @@ questions = [{'id': 0, 'submission_time': 'today', 'view_number': 10, 'vote_numb
               'message': 'wasssup?', 'image': 'None'}]
 HEADERS = ['User ID', 'Time of a submission', 'number of views', 'number of votes', 'type of a question',
            'question message', 'question image']
+
+ANSWERS = []
