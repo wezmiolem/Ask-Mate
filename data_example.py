@@ -4,5 +4,5 @@ questions = [{'id': 0, 'submission_time': 'today', 'view_number': 10, 'vote_numb
               'message': 'you talkin to me?', 'image': 'None'},
              {'id': 2, 'submission_time': 'tomorrow', 'view_number': 7, 'vote_number': 5, 'type': 'unknown',
               'message': 'wasssup?', 'image': 'None'}]
-HEADERS = ['User ID', 'Time of a submission', 'number of views', 'number of votes', 'type of a question',
+HEADERS = ['Question ID', 'Time of a submission', 'number of views', 'number of votes', 'type of a question',
            'question message', 'question image']
