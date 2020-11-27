@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, redirect
 from data_example import questions
 import data_processing
 
@@ -16,6 +16,17 @@ def index():
 @app.route('/add_update')
 def add_update():
     return render_template('add_update.html')
+
+
+@app.route('/add_update/post', methods=['POST'])
+def add_question():
+    new_question = dict(request.form)
+    new_question['id'] = data_processing.get_new_id(questions)
+    new_question['submission_time'] = 'now'
+    new_question['view_number'] = 0
+    new_question['vote_number'] = 0
+    data_processing.add_question(questions, new_question)
+    return redirect(url_for('index'))
 
 
 if __name__ == '__main__':
