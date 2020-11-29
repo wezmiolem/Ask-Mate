@@ -20,6 +20,11 @@ def get_list_of_dict(keys_list, key_arguments):
     return dict_list
 
 
+def get_dict_from_list(keys, values):
+    result = dict(zip(keys, values))
+    return result
+
+
 def verify_lists_for_dict(keys_list, key_arguments):
     incorrect_tmp = [key_arguments[i] for i in range(len(key_arguments)) if len(keys_list) != len(key_arguments[i])]
 
@@ -29,4 +34,3 @@ def verify_lists_for_dict(keys_list, key_arguments):
             print(len(elem), elem)
         print("\nCorrect data lenght/number is: ", len(keys_list))
         return False
-    
