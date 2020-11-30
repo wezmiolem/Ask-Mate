@@ -9,26 +9,12 @@
 
 <h1>Ask Mate Test</h1>
     <table>
-        <thead>
-            <tr>
-                {% for header in headers %}
-                    <th>
-                        {{ header }}
-                    </th>
-                {% endfor %}
-            </tr>
-        </thead>
-        <tbody>
-            {% for question in questions %}
-                <tr>
-                    {% for key in question_keys %}
-                        <th>
-                            {{ question[key] }}
-                        </th>
-                    {% endfor %}
-                </tr>
-            {% endfor %}
-        </tbody>
+        <th> <a href ="{{url_for("list_of_question")}} ">{{ "show informations" }}</a></th>
+        <th><a href ="{{url_for("question")}} ">{{ "show questions" }}</a></th>
+
+
+
+
     </table>
 
 </body>
