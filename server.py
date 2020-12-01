@@ -25,7 +25,7 @@ def add_question():
     new_question['submission_time'] = 'now'
     new_question['view_number'] = 0
     new_question['vote_number'] = 0
-    data_processing.add_question(questions, new_question)
+    data_processing.add_to_data(questions, new_question)
     return redirect(url_for('index'))
 
 
