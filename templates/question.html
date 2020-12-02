@@ -23,8 +23,11 @@
                 <tr>
                     {% for key in question_keys %}
                         <th>
-
+                        {% if key == "id" %}
+                            <a href = {{ url_for('find_question' ,question_id=question["id"]) }}>{{question[key]}}</a>
+                            {% else %}
                             {{ question[key] }}
+                        {% endif %}
 
 
 

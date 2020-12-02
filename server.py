@@ -27,5 +27,13 @@ def question():
 
     return render_template('question.html', questions=questions,headers=headers,question_keys=question_keys)
 
+@app.route('/question/<int:question_id>')
+def find_question(question_id):
+    for i in range(len(questions)):
+        message =(questions[i]["message"])
+        return message
+
+
+
 if __name__ == '__main__':
     app.run()
